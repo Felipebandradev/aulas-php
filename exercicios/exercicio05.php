@@ -24,7 +24,7 @@
         }
 
         table,td,th{ border: black 1px solid;}
-        
+
         tr:first-child{
                     color:honeydew;
                     background-color:darkorchid;
@@ -43,9 +43,9 @@
         </tr>
         <?php
         $alunos = [ 
-            [   "nome"  =>   "Moura",
+            [   "nome"  =>  "Moura",
                 "nota1" => 8,
-                "nota2" => 0
+                "nota2" => 6
             ], 
             ["nome" => "Aline",
             "nota1" => 10,
