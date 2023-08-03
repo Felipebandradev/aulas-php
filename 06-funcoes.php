@@ -60,7 +60,7 @@
         ?>
 
         <p>Resultado 3: <?=$resultado3?></p>
-        
+
         <?php if($resultado3 > 100) {  ?>
             <p>Vinícius foi demitido!</p>
         <?php }else{ ?>
@@ -70,6 +70,16 @@
         <?php if ( soma(2, 3, 10) >= 10 ){?>
             <p>Kauê foi Reprovado!!!</p>
         <?php } ?>
+        
+        <?php
+        function saudacao( $mensagem , $pessoa = "Fulano(a)"){
+            return "Olá, $mensagem $pessoa!"; 
+        }
+        ?>
+
+        <p> <?=saudacao("Bom dia!", "Melissa" )?></p>
+        <p> <?=saudacao("Boa noite!", "Tanaka" )?></p>
+        <p> <?=saudacao("Boa Tarde!")?></p>
 
     </main>
 </body>
