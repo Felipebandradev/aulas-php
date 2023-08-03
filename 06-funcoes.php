@@ -97,10 +97,13 @@
         function verificando_negativo(int  $valor):string {
             if( $valor < 0){
                 return "É negativo";
-            }else {
-                return "Não é negativo";
             }
+            /* Early Return (é possivel omitir o else nesse caso): */
+            return "Não é negativo";
+
         }
+        /* Código abaixo da erro se usar indução de tipo:
+        <p>Número 50: <?=verificando_negativo("TEXTO")</p>  */
         ?>
 
         <p>Número 10: <?=verificando_negativo(10)?></p>
