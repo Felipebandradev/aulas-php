@@ -81,6 +81,34 @@
         <p> <?=saudacao("Boa noite!", "Tanaka" )?></p>
         <p> <?=saudacao("Boa Tarde!")?></p>
 
+        <h2>Indução de tipos de dados</h2>
+
+        <?php
+        /*  Tipos de dados mais comuns 
+        string -> Caracteres em geral;
+        int -> números inteiros ;
+        Float -> números com casas decimais ;
+        array -> vetor;
+
+        isso auxiliará na entrada/saída correta 
+        do dados manipulados pala função, além de melhorar
+        as mensagens de erro  quando ocorrem problemas.
+        */
+        function verificando_negativo(int  $valor):string {
+            if( $valor < 0){
+                return "É negativo";
+            }else {
+                return "Não é negativo";
+            }
+        }
+        ?>
+
+        <p>Número 10: <?=verificando_negativo(10)?></p>
+        <p>Número -10: <?=verificando_negativo(-10)?></p>
+        <p>Número 50: <?=verificando_negativo(50)?></p>
+        
+        
+
     </main>
 </body>
 </html>
