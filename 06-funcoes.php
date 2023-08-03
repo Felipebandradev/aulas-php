@@ -36,7 +36,7 @@
 
         <?php
         function dados_curso(){
-                return "Encher po saco no WhatsApp";
+                return "Encher o saco no WhatsApp";
         }     
         ?>
         <p>Estamos no curso <?=dados_curso()?></p>
