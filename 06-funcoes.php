@@ -31,6 +31,16 @@
             </article>
             
         </section>
+
+        <h2>Função com retorno de dados</h2>
+
+        <?php
+        function dados_curso(){
+                return "Encher po saco no WhatsApp";
+        }     
+        ?>
+        <p>Estamos no curso <?=dados_curso()?></p>
+        <p><?=dados_curso()?> é ministrado no Senac Penha.</p>
     </main>
 </body>
 </html>
