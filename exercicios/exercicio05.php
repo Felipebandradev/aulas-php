@@ -85,7 +85,7 @@
                 <td><?=$aluno["nota1"]?></td>
                 <td><?=$aluno["nota2"]?></td>
                 <td><?=$resultado($aluno["nota1"],$aluno["nota2"])?></td>
-                <td><b class="<?=situacao($resultado($aluno["nota1"],$aluno["nota2"]))?>"><?=situacao($resultado($aluno["nota1"],$aluno["nota2"]))?></b></td>
+                <td><span class="<?=situacao($resultado($aluno["nota1"],$aluno["nota2"]))?>"><?=situacao($resultado($aluno["nota1"],$aluno["nota2"]))?></span></td>
             </tr>
         <?php } ?>
     </table>
