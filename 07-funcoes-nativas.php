@@ -37,6 +37,16 @@
         <pre><?=$frase_feia?></pre>
         <pre><?=$frase_bonitinha?></pre>
 
+        <h3>Exeplode()</h3>
+        <?php
+        /* Função que transforma uma string em um array */
+        $linguagens = "Html - Css - JS - Php";
+        $array_linguagens = explode(" - ", $linguagens);
+        ?>
+
+        <pre><?=var_dump($array_linguagens)?></pre>
+        <pre><?=var_dump($linguagens)?></pre>
+
 
         <h2>Numéricas</h2>
 
