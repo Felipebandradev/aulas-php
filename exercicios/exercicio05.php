@@ -7,6 +7,11 @@
     <title>Média de alunos</title>
 
     <style>
+
+        body { 
+            font-family: monospace;
+            background-color: #9966cc;
+        }
         .aprovado {
             color: #363b96;
         }
