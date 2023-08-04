@@ -46,9 +46,19 @@
 
         <pre><?=var_dump($array_linguagens)?></pre>
         <pre><?=var_dump($linguagens)?></pre>
-
+        
+        <hr>
 
         <h2>Numéricas</h2>
+
+        <h3>min,max,round</h3>
+        <?php 
+        $valores = [10, 5, 50, 1000, 275];
+        $valore_qualquer = 2750.33333;
+        ?>
+        <p>Menor Valor : <?=min($valores)?></p>
+        <p>Maior Valor : <?=max($valores)?></p>
+        <p>Arredondamento : <?=round($valore_qualquer)?></p>
 
         <h2>Arrays</h2>
 
