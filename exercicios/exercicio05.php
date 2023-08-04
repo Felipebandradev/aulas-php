@@ -68,7 +68,7 @@
         ];
 
         $resultado = function (int $nota1, $nota2 ){
-        return $nota_final = ($nota1 + $nota2)/2;
+        return  ($nota1 + $nota2)/2;
         };
     
         function situacao( $resultados ){ 
