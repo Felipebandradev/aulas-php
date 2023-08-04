@@ -63,7 +63,7 @@
         $alunos = [
             [
                 "nome"  =>  "Moura",
-                "nota1" => 8,
+                "nota1" => 3,
                 "nota2" => 6
             ],
             [
@@ -78,22 +78,21 @@
             ],
             [
                 "nome" => "Eliel",
-                "nota1" =>  0,
+                "nota1" =>  2,
                 "nota2" => 8
             ],
             [
                 "nome" => "Valeska",
-                "nota1" => 3,
-                "nota2" => 7
+                "nota1" => 10,
+                "nota2" => 10
             ]
         ];
 
-        $resultado = function (int $nota1, $nota2) {
+        $resultado = function (float $nota1, float $nota2):float {
             return ($nota1 + $nota2) / 2;
         };
 
-        function situacao($resultados)
-        {
+        function situacao(float $resultados):string {
             if ($resultados >= 7) {
                 return "aprovado";
             } else {
