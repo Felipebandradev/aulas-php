@@ -97,13 +97,26 @@
         </ul>
 
         <h3>arry_sum()</h3>
-        
+
         <?php
         /* Função para somar valores */
         $total = array_sum($valores);
         ?>
-        <p><?=$total?></p>
+        <p>soma dos valores: <?=$total?></p>
 
+        <h3>array_unique()</h3>
+
+        <?php
+        /* Função que retorna um novo
+        array com dados únicos */
+        $produtos = ["Tv" , "Notebook","Tv",
+                    "geladeira", "Monitor", "Notebook",
+                    "Teclado", "Mouse"
+                    ];
+        $produtos_unicos = array_unique($produtos);
+        ?>
+        <pre><?=var_dump($produtos)?></pre>
+        <pre><?=var_dump($produtos_unicos)?></pre>
         <h2>Filtros</h2>
 
 
