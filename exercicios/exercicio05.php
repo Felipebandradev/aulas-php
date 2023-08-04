@@ -93,11 +93,9 @@
         };
 
         function situacao(float $resultados):string {
-            if ($resultados >= 7) {
-                return "aprovado";
-            } else {
-                return "reprovado";
-            }
+            /* Sintaxe alternativa usando operador 
+            ternario "?:" :*/
+              return $resultados >= 7 ? "aprovado" : "reprovado" ;
         }
 
         foreach ($alunos as $aluno) { ?>
