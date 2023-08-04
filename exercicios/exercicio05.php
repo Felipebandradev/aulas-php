@@ -8,11 +8,21 @@
 
     <style>
         .aprovado {
-            color: blue;
+            color: #363b96;
         }
 
         .reprovado {
-            color: red;
+            color: #bc1069;
+        }
+
+        tr:nth-child(odd){
+            color: #7e2d7e;
+            background-color:#e0bcdd;
+        }    
+        
+        tr:nth-child(even){ 
+            color: #642764;   
+            background-color: #f0ddee;
         }
 
         table {
@@ -20,20 +30,20 @@
             margin: auto;
         }
 
-        tr {
+        tr, caption {
             text-align: center;
             font-size: 2rem;
         }
 
-        table,
-        td,
-        th {
-            border: black 1px solid;
-        }
-
         tr:first-child {
             color: honeydew;
-            background-color: darkorchid;
+            background-color: #ac58aa;
+        }
+        caption {
+            border-top-left-radius: 51px  ;
+            border-top-right-radius: 51px  ;
+            color:white;
+            background-color: #993399;
         }
     </style>
 
@@ -41,6 +51,7 @@
 
 <body>
     <table>
+        <caption>Notas</caption>
         <tr>
             <th>Aluno</th>
             <th>1ª Nota</th>
@@ -96,7 +107,7 @@
                 <td><?= $aluno["nota1"] ?></td>
                 <td><?= $aluno["nota2"] ?></td>
                 <td><?= $resultado($aluno["nota1"], $aluno["nota2"]) ?></td>
-                <td><span class="<?= situacao($resultado($aluno["nota1"], $aluno["nota2"])) ?>"><?= situacao($resultado($aluno["nota1"], $aluno["nota2"])) ?></span></td>
+                <td><b class="<?= situacao($resultado($aluno["nota1"], $aluno["nota2"])) ?>"><?= situacao($resultado($aluno["nota1"], $aluno["nota2"])) ?></b></td>
             </tr>
         <?php } ?>
     </table>
