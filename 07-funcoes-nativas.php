@@ -117,7 +117,25 @@
         ?>
         <pre><?=var_dump($produtos)?></pre>
         <pre><?=var_dump($produtos_unicos)?></pre>
+
         <h2>Filtros</h2>
+
+        <p>Recurso/constantes de análise e limpeza de dados aplicados através de funções <code>filter_var()</code> e <code>filter_input()</code></p>
+        
+        <h3>Validação</h3>
+        
+        <?php 
+        $email = "barbosa@algo.com.br";
+        $email2 = "moura.com.br";
+        ?>
+        
+        <P> Verificando se o email <?=$email?> é vaildo: <pre> <?=var_dump(filter_var($email, FILTER_VALIDATE_EMAIL))?></pre>  </P>
+        <P> Verificando se o email <?=$email2?> é vaildo: <pre> <?=var_dump(filter_var($email2, FILTER_VALIDATE_EMAIL))?></pre>  </P>
+
+        <h3>Sanitização</h3>
+
+        <hr>
+        
 
 
         <h2>Segurança</h2>
