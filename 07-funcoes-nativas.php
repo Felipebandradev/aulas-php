@@ -127,6 +127,10 @@
         <?php 
         $email = "barbosa@algo.com.br";
         $email2 = "moura.com.br";
+        
+        /* Se o e-mail informado for inválido, ou seja,
+        se não seguir o padrão geral de endereços de e-mail,
+        a função abaixo retornará "false". */
         ?>
         
         <P> Verificando se o email <?=$email?> é vaildo: <pre> <?=var_dump(filter_var($email, FILTER_VALIDATE_EMAIL))?></pre>  </P>
