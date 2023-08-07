@@ -127,7 +127,7 @@
         <?php 
         $email = "barbosa@algo.com.br";
         $email2 = "moura.com.br";
-        
+
         /* Se o e-mail informado for inválido, ou seja,
         se não seguir o padrão geral de endereços de e-mail,
         a função abaixo retornará "false". */
@@ -138,11 +138,24 @@
 
         <h3>Sanitização</h3>
 
+        <?php
+        $ataque = "<script>
+                document.body.innerHTML = ' <h1> Sou ráqui  !! mwahaha :( </h1>'
+                </script> ";
+        // Execução sem sanitização (script é valido)
+        //echo $ataque;
+        
+        $ataque_sanitizado = filter_var($ataque, FILTER_SANITIZE_SPECIAL_CHARS);
+
+        // Execução com sanitização (script é anulado)
+        echo $ataque_sanitizado;
+        ?>
+
         <hr>
         
 
 
-        <h2>Segurança</h2>
+        <h2>Segurança (criptografia de dados)</h2>
     </main>
 </body>
 </html>
