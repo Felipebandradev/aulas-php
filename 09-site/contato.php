@@ -1,12 +1,12 @@
 <?php 
 
-$nome_pagina = "Página Inicial -";
+$nome_pagina = "Contato -";
 require "inc/cabecalho.php"; 
 
 ?>
 
-        <h2>Bem-vindo ao site Exemplo</h2>
-        <p>Esta é a primeira Página</p>
+        <h2>Pagina de contato</h2>
+        <p>Aqui esta alguns passos:</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut iste quas magni iure explicabo praesentium nulla soluta, voluptas odio cupiditate vero optio libero impedit. Placeat corporis numquam exercitationem dolore repellendus.</p>
   
 
