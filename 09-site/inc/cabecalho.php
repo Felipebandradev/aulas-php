@@ -6,7 +6,7 @@ $titulo = match ($arquivo) {
     "cursos.php" => "Cursos",
     "duvidas.php" => "Dúvidas",
     "contato.php" => "Contato",
-    default => "Site PHP"
+    default => "Nova Página"
 };
 ?>
 
