@@ -1,6 +1,4 @@
 <?php 
-
-$nome_pagina = "Contato -";
 require "inc/cabecalho.php"; 
 
 ?>

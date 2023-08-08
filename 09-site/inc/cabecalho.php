@@ -1,9 +1,22 @@
+<?php
+$arquivo = basename($_SERVER['PHP_SELF']) ;
+
+$titulo = match ($arquivo) {
+    "index.php" => "Página Inicial",
+    "cursos.php" => "Cursos",
+    "duvidas.php" => "Dúvidas",
+    "contato.php" => "Contato",
+    default => "Site PHP"
+};
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=$nome_pagina?> Site PHP</title>
+    <title><?=$titulo?> | Site PHP</title>
 
     <link rel="stylesheet" href="css/estilos.css">
     

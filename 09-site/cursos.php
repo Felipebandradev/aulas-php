@@ -1,6 +1,4 @@
 <?php 
-
-$nome_pagina = "Cursos -";
 require "inc/cabecalho.php"; 
 ?>
 

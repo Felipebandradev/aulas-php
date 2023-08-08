@@ -1,6 +1,4 @@
 <?php 
-
-$nome_pagina = "Página Inicial -";
 require "inc/cabecalho.php"; 
 
 ?>

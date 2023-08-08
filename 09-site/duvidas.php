@@ -1,5 +1,4 @@
 <?php  
-$nome_pagina = "Dúvidas -";
 require "inc/cabecalho.php"; 
 ?>
 
