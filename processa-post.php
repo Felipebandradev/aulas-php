@@ -20,11 +20,15 @@
         } else {
 
         // Capturandos dados transmitidos
-        $nome = $_POST["nome"];
-        $email = $_POST["email"];
-        $idade = $_POST["idade"];
-        $mensagem = $_POST["menssagem"];
-        $interesses = $_POST["interesses"];
+        //$nome = $_POST["nome"];
+        $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+        $idade = filter_input(INPUT_POST, "idade", FILTER_SANITIZE_NUMBER_INT);
+        $mensagem = filter_input(INPUT_POST, "menssagem", FILTER_SANITIZE_SPECIAL_CHARS);
+        $interesses = filter_var_array(
+            $_POST["interesses"] ?? [],
+            FILTER_SANITIZE_SPECIAL_CHARS
+        );
 
         
         ?>
@@ -36,8 +40,20 @@
         <li>E-mail: <?=$email?></li>
         <li> Idade : <?=$idade?></li>
 
-        <?php if( !empty($_POST["interesses"])){ ?>
+        <?php if( !empty($interesses)){ ?>
         <li> interesses : <?=implode(", ", $interesses)?></li>
+        
+        
+        
+        <li> interesses : 
+            <ul>
+                <?php foreach($interesses as $interesse){ ?>    
+                <li> <?=$interesse?></li>
+                <?php } ?>
+            </ul>
+        </li>
+        
+        
         <?php } ?>
 
         <?php
@@ -46,7 +62,7 @@
         <li>Mensagem: <?=$mensagem?></li>
         <?php }; ?>
     </ul>
-    <?php }?>
+    <?php } ?>
     </main>
 
 
