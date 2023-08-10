@@ -52,7 +52,7 @@
                 <div class="col-6">
                     <p>
                         <label for="fabricante" class="form-label">Fabricante do Produto: </label>
-                        <select name="fabricante" id="fabricante" class="form-select">
+                        <select name="fabricante" id="fabricante" class="form-select" required>
                             <option value=""></option>
                             <?php
                             $fabricantes = ["Eletrolux", "Samsung", "Philips", "LG", "hp"];
@@ -83,7 +83,7 @@
                 <div class="col-md-12">
                     <p>
                         <label for="descricao" class="form-label">Descrição do Produto:</label><br>
-                        <textarea name="descricao" id="descricao" cols="30" rows="10" class="form-control"></textarea>
+                        <textarea name="descricao" id="descricao" cols="30" rows="10" class="form-control" required></textarea>
                     </p>
                 </div>
                 <div class="col-12">
