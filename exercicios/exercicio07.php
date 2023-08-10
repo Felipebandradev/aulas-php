@@ -45,8 +45,8 @@
                 <legend class="text-center"><b>Cadastro de Produto</b></legend>
                 <div class="col-md-6">
                     <p>
-                        <label for="produto" class="form-label">Produto:</label>
-                        <input type="text" name="pruduto" id="produto" placeholder="Ex: Geladeira Portátil" required class="form-control">
+                        <label for="produto" class="form-label">Nome do produto:</label>
+                        <input type="text" name="produto" id="produto" placeholder="Ex: Geladeira Portátil" required class="form-control">
                     </p>
                 </div>
                 <div class="col-6">
@@ -66,7 +66,7 @@
                 <div class="col-md-6">
                     <p>
                         <label for="preco" class="form-label">Preço:</label>
-                        <input type="number" name="preco" id="preco" min="100" max="10000" placeholder="100 - 10000" required class="form-control" step="0.01">
+                        <input type="number" name="preco" id="preco" min="100" max="10000" placeholder="100 - 10000" required class="form-control" step=".01">
                     </p>
                 </div>
                 <div class="col-form-label col-md-6 ">
