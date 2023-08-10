@@ -68,7 +68,15 @@
    
 <?php 
 
-if ( !empty($_POST["produto"]) || !empty($_POST["preco"]) || !empty($_POST["fabricante"]) || !empty($_POST["descricao"])){
+if ( empty($_POST["produto"]) || empty($_POST["preco"]) || empty($_POST["fabricante"]) || empty($_POST["descricao"])){ ?>
+   <article class="container-lg">
+       <h2  class=" text-center">Algo deu Errado!!</h2>
+       <p class="errou">Você Deve preencher todos os campos !!     <a href="exercicio07.php" class="btn btn-primary" >Voltar</a></p>
+
+   </article>
+<?php
+} else {
+
 
 $produto_cadastrado = filter_input(INPUT_POST,"produto",FILTER_SANITIZE_FULL_SPECIAL_CHARS) ;
 
@@ -127,14 +135,8 @@ $descricao = filter_input(INPUT_POST,"descricao", FILTER_SANITIZE_FULL_SPECIAL_C
         </fieldset>
     </article>
 <?php
-} else {
-?>  
-   <article class="container-lg">
-       <h2  class=" text-center">Algo deu Errado!!</h2>
-       <p class="errou">Você Deve preencher todos os campos !!     <a href="exercicio07.php" class="btn btn-primary" >Voltar</a></p>
-   </article>
 
-<?php } ?>
+ } ?>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

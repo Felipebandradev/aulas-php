@@ -53,7 +53,7 @@
                     <p>
                         <label for="fabricante" class="form-label">Fabricante do Produto: </label>
                         <select name="fabricante" id="fabricante" class="form-select" required>
-                            <option value=""></option>
+                            <option></option>
                             <?php
                             $fabricantes = ["Eletrolux", "Samsung", "Philips", "LG", "hp"];
                             foreach ($fabricantes as $fabricante) {
