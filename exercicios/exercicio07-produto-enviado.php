@@ -17,7 +17,7 @@ if ( !empty($_POST["produto"]) || !empty($_POST["preco"])){
 
 $produto = filter_input(INPUT_POST,"produto",FILTER_SANITIZE_FULL_SPECIAL_CHARS) ;
 
-$filtro_preco = filter_input(INPUT_POST, "preco",FILTER_SANITIZE_NUMBER_INT);
+$filtro_preco = filter_input(INPUT_POST, "preco",FILTER_VALIDATE_FLOAT);
 $preco = "R$".number_format($filtro_preco,2,",",".");
 
 $disponibilidade = filter_input(INPUT_POST,"disponibilidade", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
