@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casdatro de Produto</title>
 
- 
-
+    <!-- Bom uso do CSS e Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">   
     <style>
 
@@ -55,6 +54,7 @@
                         <select name="fabricante" id="fabricante" class="form-select" required>
                             <option></option>
                             <?php
+                            /* Certinho! */
                             $fabricantes = ["Eletrolux", "Samsung", "Philips", "LG", "hp"];
                             foreach ($fabricantes as $fabricante) {
                             ?>
