@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produto Cadastrado</title>
 
+    <!-- Muito bom uso do CSS e do Bootstrap -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <style>
@@ -80,6 +82,7 @@ if ( empty($_POST["produto"]) || empty($_POST["preco"]) || empty($_POST["fabrica
 
 $produto_cadastrado = filter_input(INPUT_POST,"produto",FILTER_SANITIZE_FULL_SPECIAL_CHARS) ;
 
+/* Aqui, junto com o filtro de sanitização, o ideal era usar o filtro que permite dígitos/casas decimais em vez do filtro de validação */
 $filtro_preco = filter_input(INPUT_POST, "preco", FILTER_VALIDATE_FLOAT,  FILTER_SANITIZE_NUMBER_FLOAT);
 $preco = "R$".number_format($filtro_preco,2,",",".");
 
@@ -91,6 +94,15 @@ $descricao = filter_input(INPUT_POST,"descricao", FILTER_SANITIZE_FULL_SPECIAL_C
 ?>
     <article class="container-lg">
 
+    <!-- Achei interessante a ideia de, após o cadastro, desabilitar os campos do formulário.
+    Mas a execução da ideia tá meio gambiarra, não?
+    Você teve que fazer dois formulários, um na exercicio07.php (com tudo habilitado),
+    e outro aqui na exercicio07-produto-enviado.php (com tudo desabilitado).
+
+    O ideal é bolar alguma lógica que não demande fazer dois formulários.
+    Talvez fazer uma validação/condicional para quando os campos deverão ter o atributo disabled.
+    Ou até algo com o auxilio do JS... enfim, precisa pensar nisso (novo desafio... rs)
+    -->
         <fieldset class="row g-3 container-lg m-auto p-5 shadow-lg ">
         <legend class="text-center"><b>Produto Cadastrado</b></legend>
             <div>
